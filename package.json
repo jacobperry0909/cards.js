@@ -1,24 +1,24 @@
 {
-  "name": "cards.js",
-  "version": "1.0.0",
-  "description": "generate a deck of cards",
-  "main": "Cards.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jacobperry0909/cards.js.git"
-  },
-  "keywords": [
-    "Cards",
-    "deck",
-    "deck-of-cards"
-  ],
-  "author": "Jacob Perry",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jacobperry0909/cards.js/issues"
-  },
-  "homepage": "https://github.com/jacobperry0909/cards.js#readme"
+	"name": "cards.js",
+	"version": "1.0.1",
+	"description": "generate a deck of cards",
+	"main": "Cards.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jacobperry0909/cards.js.git"
+	},
+	"keywords": [
+		"Cards",
+		"deck",
+		"deck-of-cards"
+	],
+	"author": "Jacob Perry",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jacobperry0909/cards.js/issues"
+	},
+	"homepage": "https://github.com/jacobperry0909/cards.js#readme"
 }

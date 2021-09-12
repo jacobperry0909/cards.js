@@ -1,7 +1,14 @@
 class Deck {
 	constructor(includeJokers) {
 		this.cards = [];
-		this.includeJokers = includeJokers || false;
+
+		if (includeJokers) {
+			if (typeof includeJokers === 'boolean')
+				this.includeJokers = includeJokers || false;
+			else {
+				throw new Error('includeJokers paramater must be boolean');
+			}
+		}
 
 		this.reset();
 	}
@@ -26,7 +33,39 @@ class Deck {
 		this.cards.splice(index, 1);
 	}
 
+	addCard(suitName, cardValue) {
+		let suitIcon;
+		switch (suitName) {
+			case 'diamonds':
+				suitIcon = '♦';
+				break;
+			case 'clubs':
+				suitIcon = '♣';
+				break;
+			case 'hearts':
+				suitIcon = '♥';
+				break;
+			default:
+				suitIcon = '♠';
+				break;
+		}
+		let card = [];
+		if (cardValue === 'joker') {
+			card.push({ name: suitName }, cardValue);
+		} else {
+			card.push([{ icon: suitIcon, name: suitName }, cardValue]);
+		}
+
+		this.cards.push(card);
+	}
+
+	takeTopCard() {
+		const card = this.cards.shift();
+		return card;
+	}
+
 	reset() {
+		this.cards = [];
 		const suits = [
 			{ icon: '♣', name: 'clubs' },
 			{ icon: '♦', name: 'diamonds' },
